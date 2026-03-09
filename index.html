@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link na Bio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="wp-content/uploads/2025/06/logomarca.png">
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #111111;
+            color: #ffffff;
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Logo */
+        .logo {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Buttons Grid */
+        .links-grid {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .link-item {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .link-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .link-item:hover .link-image {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Animations */
+        .observe-animation {
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeUp {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .animate-slideLeft {
+            animation: slideLeft 0.8s ease forwards;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+            opacity: 0.6;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <img src="wp-content/uploads/2025/06/logomarca.png" alt="Logo" class="logo observe-animation" data-animation="fadeUp">
+        
+        <!-- Links Section -->
+        <div class="links-grid">
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft">
+                <img src="1.png" alt="Botão 1" class="link-image">
+            </a>
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.1s;">
+                <img src="2.png" alt="Botão 2" class="link-image">
+            </a>
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.2s;">
+                <img src="3.png" alt="Botão 3" class="link-image">
+            </a>
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.3s;">
+                <img src="4.png" alt="Botão 4" class="link-image">
+            </a>
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.4s;">
+                <img src="5.png" alt="Botão 5" class="link-image">
+            </a>
+            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.5s;">
+                <img src="6.png" alt="Botão 6" class="link-image">
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Link na Bio. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.dataset.animation;
+                        entry.target.classList.add(`animate-${animation}`);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.observe-animation');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>
