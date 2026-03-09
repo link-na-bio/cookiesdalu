@@ -50,7 +50,6 @@
             height: auto;
             border-radius: 50%;
             margin-bottom: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
 
         /* Buttons Grid */
@@ -73,12 +72,10 @@
             display: block;
             border-radius: 12px;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .link-item:hover .link-image {
             transform: scale(1.03);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
         /* Animations */
@@ -133,9 +130,9 @@
 
     <div class="container">
         <div class="links-grid">
-            <a href="#" class="link-item">
-                <img src="1.png" alt="Botão 1" class="link-image">
-            </a>
+            <div class="header-image-container">
+                <img src="1.png" alt="Cabeçalho" class="link-image">
+            </div>
             <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.1s;">
                 <img src="2.png" alt="Botão 2" class="link-image">
             </a>
