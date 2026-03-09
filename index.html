@@ -87,6 +87,34 @@
             transform: scale(1.03);
         }
 
+        /* Social Image Overlay (Image 6) */
+        .image-overlay-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .social-overlay {
+            position: absolute;
+            top: 43%;
+            left: 31%;
+            width: 63%;
+            height: 43%;
+            z-index: 10;
+        }
+
+        .social-link {
+            position: absolute;
+            display: block;
+            /* background: rgba(255, 0, 0, 0.2); /* For debugging positions */
+            text-decoration: none;
+        }
+
+        .social-link.instagram { top: 0; left: 16%; width: 28%; height: 45%; }
+        .social-link.whatsapp { top: 0; left: 50%; width: 33%; height: 45%; }
+        .social-link.tiktok { top: 52%; left: 1%; width: 29%; height: 45%; }
+        .social-link.facebook { top: 52%; left: 33%; width: 28%; height: 45%; }
+        .social-link.youtube { top: 52%; left: 63%; width: 33%; height: 45%; }
+
         /* Animations */
         .observe-animation {
             opacity: 0;
@@ -160,10 +188,16 @@
                     style="animation-delay: 0.4s;">
                     <img src="5.png" alt="Botão 5" class="link-image">
                 </a>
-                <a href="#" class="link-item observe-animation" data-animation="slideLeft"
-                    style="animation-delay: 0.5s;">
-                    <img src="6.png" alt="Botão 6" class="link-image">
-                </a>
+                <div class="image-overlay-container link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.5s;">
+                    <img src="6.png" alt="Nossas Redes Sociais" class="link-image">
+                    <div class="social-overlay">
+                        <a href="https://www.instagram.com/cookiesdalu.ofc/" class="social-link instagram" title="Instagram"></a>
+                        <a href="https://wa.me/5561985103316" class="social-link whatsapp" title="WhatsApp"></a>
+                        <a href="https://www.tiktok.com/@cookiesdalu" class="social-link tiktok" title="TikTok"></a>
+                        <a href="https://www.facebook.com/cookiesdalu.ofc/" class="social-link facebook" title="Facebook"></a>
+                        <a href="https://www.youtube.com/@COOKIESDALU" class="social-link youtube" title="YouTube"></a>
+                    </div>
+                </div>
             </div>
         </div>
 
