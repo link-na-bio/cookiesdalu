@@ -37,7 +37,7 @@
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 0 40px 0; /* No padding at top to touch header */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,7 +57,15 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 24px; /* Increased gap for blur effect room */
+        }
+
+        .header-image-container .link-image {
+            border-radius: 0 0 12px 12px; /* Top corners touch the edge */
+        }
+
+        .link-item .link-image {
+            box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15); /* Floating blur on bottom */
         }
 
         .link-item {
@@ -131,9 +139,10 @@
     <div class="container">
         <div class="links-grid">
             <div class="header-image-container">
-                <img src="1.png" alt="Cabeçalho" class="link-image">
+                <img src="1.png" alt="Cabeçalho" class="link-image" style="border-radius: 0;">
             </div>
-            <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.1s;">
+            <div style="padding: 0 20px; display: flex; flex-direction: column; gap: 20px;"> <!-- Wrap remaining items for side padding -->
+                <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.1s;">
                 <img src="2.png" alt="Botão 2" class="link-image">
             </a>
             <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.2s;">
@@ -148,6 +157,7 @@
             <a href="#" class="link-item observe-animation" data-animation="slideLeft" style="animation-delay: 0.5s;">
                 <img src="6.png" alt="Botão 6" class="link-image">
             </a>
+            </div>
         </div>
 
         <footer>
