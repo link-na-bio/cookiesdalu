@@ -55,10 +55,23 @@
             margin-bottom: 10px;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+        }
+
         .logo {
-            max-width: 120px;
+            max-width: 100px;
             height: auto;
             border-radius: 50%;
+        }
+
+        .logo-secondary {
+            max-width: 150px;
+            height: auto;
         }
 
         h1 {
@@ -230,7 +243,10 @@
         <a href="./index.html" class="back-link">← Voltar para o Início</a>
 
         <header>
-            <img src="logo-pascoa.png" alt="Cookies da Lu" class="logo">
+            <div class="logo-container">
+                <img src="logo-pascoa.png" alt="Cookies da Lu" class="logo">
+                <img src="menu-de-pascoa.png" alt="Cardápio de Páscoa" class="logo-secondary">
+            </div>
             <h1>Menu de Páscoa - Cookies da Lu</h1>
         </header>
 
