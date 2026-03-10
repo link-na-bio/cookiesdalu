@@ -137,19 +137,58 @@
 
         /* Notices */
         .notices {
-            background: rgba(246, 159, 142, 0.1);
-            border: 1px dashed #F69F8E;
+            background: rgba(246, 159, 142, 0.05);
             border-radius: 12px;
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
         }
 
         .notice-item {
             font-size: 0.95rem;
-            font-weight: 600;
             text-align: center;
+        }
+
+        /* Alert Box */
+        .alert-box {
+            background: linear-gradient(135deg, rgba(246, 159, 142, 0.2) 0%, rgba(216, 123, 106, 0.1) 100%);
+            border: 1px solid #F69F8E;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .alert-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #F69F8E;
+        }
+
+        .alert-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .alert-content {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #ffffff;
+        }
+
+        .alert-content strong {
+            color: #F69F8E;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         /* Floating WhatsApp Button */
@@ -322,12 +361,16 @@
         <!-- Avisos Importantes -->
         <div class="notices">
             <div class="notice-item">✨ Transforme qualquer sabor em Infantil por + R$ 5,00 (Finalização com Finni)</div>
-            <hr style="opacity: 0.2;">
-            <div class="notice-item" style="font-size: 1.1rem;">
-                📅 <strong style="color: #F69F8E;">PEDIDOS ATÉ 30 DE MARÇO</strong>
+            
+            <div class="notice-item" style="font-size: 1.1rem; font-weight: 600;">
+                📅 <span style="color: #F69F8e;">PEDIDOS ATÉ 30 DE MARÇO</span>
             </div>
-            <div class="notice-item" style="font-weight: 400; opacity: 0.9;">
-                A reserva e o agendamento da sua encomenda só serão confirmados mediante o pagamento de <strong>50% do valor total</strong> do pedido.
+
+            <div class="alert-box">
+                <div class="alert-icon">💳</div>
+                <div class="alert-content">
+                    A reserva e o agendamento da sua encomenda só serão confirmados mediante o pagamento antecipado de <strong>50% do valor total</strong> do pedido.
+                </div>
             </div>
         </div>
 
