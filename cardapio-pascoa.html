@@ -272,6 +272,42 @@
             height: 24px;
             fill: currentColor;
         }
+
+        /* Animations */
+        .observe-animation {
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeUp {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .animate-slideIn {
+            animation: slideIn 0.8s ease forwards;
+        }
     </style>
 </head>
 
@@ -280,7 +316,7 @@
     <div class="container">
         <a href="./index.html" class="back-link">← Voltar para o Início</a>
 
-        <header>
+        <header class="observe-animation" data-animation="fadeUp">
             <div class="logo-container">
                 <img src="logo-pascoa.png" alt="Cookies da Lu" class="logo">
                 <img src="menu-de-pascoa.png" alt="Cardápio de Páscoa" class="logo-secondary">
@@ -288,7 +324,7 @@
         </header>
 
         <!-- Seção 1: Tradicionais -->
-        <section>
+        <section class="observe-animation" data-animation="slideIn">
             <h2>Tradicionais</h2>
             <p class="price-info">R$ 65,00 - 450g/500g</p>
 
@@ -312,7 +348,7 @@
         </section>
 
         <!-- Seção 2: Especiais -->
-        <section>
+        <section class="observe-animation" data-animation="slideIn">
             <h2>Especiais</h2>
             <p class="price-info">R$ 80,00 - 450g/500g</p>
 
@@ -348,7 +384,7 @@
         </section>
 
         <!-- Seção 3: Trio Mini Ovos -->
-        <section>
+        <section class="observe-animation" data-animation="slideIn">
             <h2>Trio Mini Ovos</h2>
             <p class="price-info">R$ 30,00 - aprox 200g</p>
 
@@ -359,7 +395,7 @@
         </section>
 
         <!-- Avisos Importantes -->
-        <div class="notices">
+        <div class="notices observe-animation" data-animation="fadeUp">
             <div class="notice-item">✨ Transforme qualquer sabor em Infantil por + R$ 5,00 (Finalização com Finni)</div>
             
             <div class="notice-item" style="font-size: 1.1rem; font-weight: 600;">
@@ -375,7 +411,7 @@
         </div>
 
         <!-- Download Section -->
-        <div class="download-section">
+        <div class="download-section observe-animation" data-animation="fadeUp">
             <p class="download-text">Prefere ver offline? Baixe a versão completa:</p>
             <a href="Cardápio de páscoa 2026.pdf" download class="download-btn">
                 <svg class="download-icon" viewBox="0 0 24 24">
