@@ -170,6 +170,57 @@
             opacity: 0.5;
             font-size: 0.8rem;
         }
+
+        /* Download Button Section */
+        .download-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .download-btn {
+            background: linear-gradient(135deg, #F69F8E 0%, #d87b6a 100%);
+            color: #2A100B;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(246, 159, 142, 0.4);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(246, 159, 142, 0.6);
+            background: linear-gradient(135deg, #ffb3a4 0%, #F69F8E 100%);
+        }
+
+        .download-btn:active {
+            transform: translateY(2px) scale(0.98);
+        }
+
+        .download-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+        }
+
+        .download-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
     </style>
 </head>
 
@@ -259,6 +310,17 @@
             <div class="notice-item">✨ Transforme qualquer sabor em Infantil por + R$ 5,00 (Finalização com Finni)</div>
             <hr style="opacity: 0.2;">
             <div class="notice-item">📅 Pedidos até 30 de Março. Agendamento apenas mediante sinal de 50%.</div>
+        </div>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <p class="download-text">Prefere ver offline? Baixe a versão completa:</p>
+            <a href="Cardápio de páscoa 2026.pdf" download class="download-btn">
+                <svg class="download-icon" viewBox="0 0 24 24">
+                    <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                </svg>
+                Baixar Cardápio PDF
+            </a>
         </div>
 
         <footer>
