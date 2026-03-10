@@ -428,10 +428,30 @@
 
     <!-- Floating Button WhatsApp -->
     <a href="https://wa.me/5561985103316?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda%20do%20Menu%20de%20Páscoa!"
-        class="fab">
+        class="fab observe-animation" data-animation="fadeUp">
         Fazer Encomenda no WhatsApp
     </a>
 
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const animation = entry.target.dataset.animation;
+                        entry.target.classList.add(`animate-${animation}`);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('.observe-animation');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
 </html>
