@@ -191,6 +191,17 @@
             letter-spacing: 0.5px;
         }
 
+        /* Pulsing Animation */
+        @keyframes subtlePulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 rgba(246, 159, 142, 0); }
+            50% { transform: scale(1.02); box-shadow: 0 5px 15px rgba(246, 159, 142, 0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 rgba(246, 159, 142, 0); }
+        }
+
+        .alert-box {
+            animation: subtlePulse 3s infinite ease-in-out;
+        }
+
         /* Floating WhatsApp Button */
         .fab {
             position: fixed;
