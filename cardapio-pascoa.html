@@ -308,6 +308,22 @@
         .animate-slideIn {
             animation: slideIn 0.8s ease forwards;
         }
+
+        /* Specific animation for centered elements like the FAB */
+        @keyframes fadeUpCenter {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 30px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .animate-fadeUpCenter {
+            animation: fadeUpCenter 0.8s ease forwards;
+        }
     </style>
 </head>
 
@@ -428,7 +444,7 @@
 
     <!-- Floating Button WhatsApp -->
     <a href="https://wa.me/5561985103316?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda%20do%20Menu%20de%20Páscoa!"
-        class="fab observe-animation" data-animation="fadeUp">
+        class="fab observe-animation" data-animation="fadeUpCenter">
         Fazer Encomenda no WhatsApp
     </a>
 
