@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Páscoa - Cookies da Lu</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="wp-content/uploads/2025/06/logomarca.png">
+
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2A100B;
+            color: #ffffff;
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            padding-bottom: 100px; /* Room for FAB */
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Back Link */
+        .back-link {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            align-self: flex-start;
+            margin-bottom: -10px;
+        }
+
+        /* Sections */
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            border-left: 4px solid #F69F8E; /* Subtle accent color matching logo feel */
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .price-info {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: -10px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: #F69F8E;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Notices */
+        .notices {
+            background: rgba(246, 159, 142, 0.1);
+            border: 1px dashed #F69F8E;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .notice-item {
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Floating WhatsApp Button */
+        .fab {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./index.html" class="back-link">← Voltar para o Início</a>
+
+        <header>
+            <img src="wp-content/uploads/2025/06/logomarca.png" alt="Cookies da Lu" class="logo">
+            <h1>Menu de Páscoa - Cookies da Lu</h1>
+        </header>
+
+        <!-- Seção 1: Tradicionais -->
+        <section>
+            <h2>Tradicionais</h2>
+            <p class="price-info">R$ 65,00 - 450g/500g</p>
+            
+            <div class="card">
+                <div class="card-title">Brigadeiro Gourmet</div>
+                <div class="card-description">Casca de cookie com camada de chocolate, brigadeiro cremoso, snacks de cookie.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Ninho</div>
+                <div class="card-description">Casca de cookie com camada de chocolate, brigadeiro de Ninho cremoso, snacks de cookie.</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Dois Amores</div>
+                <div class="card-description">Casca de cookie com camada de chocolate, brigadeiro de Ninho e chocolate, snacks de cookie.</div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Especiais -->
+        <section>
+            <h2>Especiais</h2>
+            <p class="price-info">R$ 80,00 - 450g/500g</p>
+
+            <div class="card">
+                <div class="card-title">Brigadeiro com Nutella</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Ninho com Nutella</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Ninho com Frutas Vermelhas</div>
+                <div class="card-description">(geleia caseira)</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Maracujá com Nutella</div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Trio Mini Ovos -->
+        <section>
+            <h2>Trio Mini Ovos</h2>
+            <p class="price-info">R$ 30,00 - aprox 200g</p>
+
+            <div class="card">
+                <div class="card-title">3 unidades</div>
+                <div class="card-description">Brigadeiro, Casadinho, Ninho com Nutella.</div>
+            </div>
+        </section>
+
+        <!-- Avisos Importantes -->
+        <div class="notices">
+            <div class="notice-item">✨ Transforme qualquer sabor em Infantil por + R$ 5,00 (Finalização com Finni)</div>
+            <hr style="opacity: 0.2;">
+            <div class="notice-item">📅 Pedidos até 30 de Março. Agendamento apenas mediante sinal de 50%.</div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Cookies da Lu. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <!-- Floating Button WhatsApp -->
+    <a href="https://wa.me/5561985103316?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda%20do%20Menu%20de%20Páscoa!" class="fab">
+        Fazer Encomenda no WhatsApp
+    </a>
+
+</body>
+
+</html>
