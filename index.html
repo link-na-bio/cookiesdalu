@@ -11,6 +11,22 @@
 
         gtag('config', 'AW-16497802678');
     </script>
+    <!-- Event snippet for Compra conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16497802678/5rm-COz1koscELb74bo9',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookies da Lu | O Melhor Cookie Artesanal de Brasília</title>
@@ -231,7 +247,7 @@
             <div style="padding: 0 20px; display: flex; flex-direction: column; gap: 20px;">
                 <!-- Wrap remaining items for side padding -->
                 <a href="https://wa.me/5561985103316" class="link-item observe-animation" data-animation="slideLeft"
-                    style="animation-delay: 0.1s;">
+                    style="animation-delay: 0.1s;" onclick="return gtag_report_conversion('https://wa.me/5561985103316');">
                     <img src="2.png" alt="Botão 2" class="link-image">
                 </a>
                 <a href="https://www.whatsapp.com/catalog/556185103316/?app_absent=0"

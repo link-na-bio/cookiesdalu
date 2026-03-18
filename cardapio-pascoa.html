@@ -11,6 +11,22 @@
 
         gtag('config', 'AW-16497802678');
     </script>
+    <!-- Event snippet for Compra conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16497802678/5rm-COz1koscELb74bo9',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -504,7 +520,7 @@
 
     <!-- Floating Button WhatsApp -->
     <a href="https://wa.me/5561985103316?text=Olá,%20gostaria%20de%20fazer%20uma%20encomenda%20do%20Menu%20de%20Páscoa!"
-        class="fab observe-animation" data-animation="fadeUpCenter">
+        class="fab observe-animation" data-animation="fadeUpCenter" onclick="return gtag_report_conversion(this.href);">
         Fazer Encomenda no WhatsApp
     </a>
 
